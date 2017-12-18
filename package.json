@@ -1,0 +1,10 @@
+{
+  "name": "wtw-im-configs",
+  "version": "1.0.0",
+  "description": "A set of configs for front-end development that can be extended",
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "lerna": "^2.5.1"
+  }
+}
