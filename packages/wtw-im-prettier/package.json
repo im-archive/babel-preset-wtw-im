@@ -1,0 +1,8 @@
+{
+  "name": "wtw-im-prettier",
+  "version": "1.0.0",
+  "description": "Prettier configuration for Willis Towers Watson Individual Marketplace.",
+  "main": "index.js",
+  "author": "",
+  "license": "MIT"
+}
