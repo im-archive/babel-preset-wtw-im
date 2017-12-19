@@ -1,0 +1,10 @@
+{
+  "name": "wtw-im-jest",
+  "version": "1.0.0",
+  "description": "Jest configuration for Willis Towers Watson Individual Exchange.",
+  "main": "index.js",
+  "license": "MIT",
+  "peerDependencies": {
+    "jest-teamcity-reporter": "^0.7.0"
+  }
+}
