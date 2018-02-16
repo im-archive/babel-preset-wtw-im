@@ -6,7 +6,13 @@ module.exports = function(context, options) {
 
   const plugins = [
     require('babel-plugin-transform-class-properties'),
-    require('babel-plugin-transform-object-rest-spread')
+    require('babel-plugin-transform-object-rest-spread'),
+    [require('babel-plugin-extract-format-message'), Object.assign({
+      outFile: "locales/en.json"
+    }, options.extractFormatMessage || {}],
+    [require('babel-plugin-transform-format-message'), Object.assign({
+      inline: false
+    }, options.transformFormatMessage || {}]
   ];
 
   return {
