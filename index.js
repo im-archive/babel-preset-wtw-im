@@ -1,18 +1,24 @@
-module.exports = function(context, options) {
-  let presets = [
+const defaultSettings = require('./default-settings');
+
+module.exports = function(context, options = {}) {
+  const { react, extractFormatMessage, transformFormatMessage } = options;
+
+  const presets = [
     require('babel-preset-env'),
-    (options && options.react === false ? null : require('babel-preset-react'))
+    (react === false ? null : require('babel-preset-react'))
   ];
 
   const plugins = [
     require('babel-plugin-transform-class-properties'),
     require('babel-plugin-transform-object-rest-spread'),
-    [require('babel-plugin-extract-format-message'), Object.assign({
-      outFile: "locales/en.json"
-    }, options.extractFormatMessage || {}],
-    [require('babel-plugin-transform-format-message'), Object.assign({
-      inline: false
-    }, options.transformFormatMessage || {}]
+    extractFormatMessage !== false && [
+      require('babel-plugin-extract-format-message'),
+      Object.assign({}, defaultSettings.extractFormatMessage, extractFormatMessage)
+    ],
+    transformFormatMessage !== false && [
+      require('babel-plugin-transform-format-message'),
+      Object.assign({}, defaultSettings.transformFormatMessage, transformFormatMessage)
+    ]
   ];
 
   return {
