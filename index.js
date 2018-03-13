@@ -1,10 +1,13 @@
 const defaultSettings = require('./default-settings');
 
 module.exports = function(context, options = {}) {
-  const { react, extractFormatMessage, transformFormatMessage } = options;
+  const { env, react, extractFormatMessage, transformFormatMessage } = options;
 
   const presets = [
-    require('babel-preset-env'),
+    [
+      require('babel-preset-env'),
+      Object.assign({}, env)
+    ],
     (react === false ? null : require('babel-preset-react'))
   ];
 
