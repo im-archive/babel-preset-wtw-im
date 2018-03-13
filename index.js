@@ -12,6 +12,7 @@ module.exports = function(context, options = {}) {
   ];
 
   const plugins = [
+    require('babel-plugin-lodash'),
     require('babel-plugin-transform-class-properties'),
     require('babel-plugin-transform-object-rest-spread'),
     extractFormatMessage !== false && [
