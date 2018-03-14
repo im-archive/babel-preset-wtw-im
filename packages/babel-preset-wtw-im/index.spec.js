@@ -1,6 +1,14 @@
 const configPreset = require('./index');
 const defaultSettings = require('./default-settings');
 
+function findPlugin(pluginList, expectedPlugin) {
+  return pluginList.find(plugin =>
+    Array.isArray(plugin)
+      ? plugin[0] === expectedPlugin
+      : plugin === expectedPlugin
+  );
+}
+
 it('can exclude react preset', () => {
   let { presets } = configPreset();
   expect(presets[1]).not.toBeNull();
@@ -10,37 +18,37 @@ it('can exclude react preset', () => {
 });
 
 describe('babel-plugin-extract-format-message', () => {
-  const extractFormatMessageIndex = 2;
+  const plugin = require('babel-plugin-extract-format-message');
 
   it('can be excluded', () => {
     let { plugins } = configPreset();
-    expect(plugins[extractFormatMessageIndex]).not.toBeNull();
+    expect(findPlugin(plugins, plugin)).not.toBeFalsy();
 
     ({ plugins } = configPreset(null, { extractFormatMessage: false }));
-    expect(plugins[extractFormatMessageIndex]).toBeFalsy();
+    expect(findPlugin(plugins)).toBeFalsy();
   });
 
   it('consumes the default options', () => {
     const { plugins } = configPreset();
-    const settings = plugins[extractFormatMessageIndex][1];
+    const settings = findPlugin(plugins, plugin)[1]
     expect(settings).toMatchObject(defaultSettings.extractFormatMessage);
   });
 });
 
 describe('babel-plugin-transform-format-message', () => {
-  const transformFormatMessageIndex = 3;
+  const plugin = require('babel-plugin-transform-format-message');
 
   it('can be excluded', () => {
     let { plugins } = configPreset();
-    expect(plugins[transformFormatMessageIndex ]).not.toBeNull();
+    expect(findPlugin(plugins, plugin)).not.toBeFalsy();
 
     ({ plugins } = configPreset(null, { transformFormatMessage: false }));
-    expect(plugins[transformFormatMessageIndex]).toBeFalsy();
+    expect(findPlugin(plugins, plugin)).toBeFalsy();
   });
 
   it('consume the default options', () => {
     const { plugins } = configPreset();
-    const settings = plugins[transformFormatMessageIndex][1];
+    const settings = findPlugin(plugins, plugin)[1]
     expect(settings).toMatchObject(defaultSettings.transformFormatMessage);
   });
 });

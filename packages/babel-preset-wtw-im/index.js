@@ -14,16 +14,22 @@ module.exports = function(context, options = {}) {
   const plugins = [
     require('babel-plugin-lodash'),
     require('babel-plugin-transform-class-properties'),
-    require('babel-plugin-transform-object-rest-spread'),
-    extractFormatMessage !== false && [
+    require('babel-plugin-transform-object-rest-spread')
+  ];
+
+  if (extractFormatMessage !== false) {
+    plugins.push([
       require('babel-plugin-extract-format-message'),
       Object.assign({}, defaultSettings.extractFormatMessage, extractFormatMessage)
-    ],
-    transformFormatMessage !== false && [
+    ]);
+  }
+
+  if (transformFormatMessage !== false) {
+    plugins.push([
       require('babel-plugin-transform-format-message'),
       Object.assign({}, defaultSettings.transformFormatMessage, transformFormatMessage)
-    ]
-  ];
+    ]);
+  }
 
   return {
     presets,
