@@ -7,9 +7,12 @@ module.exports = function(context, options = {}) {
     [
       require('babel-preset-env'),
       Object.assign({}, env)
-    ],
-    (react === false ? null : require('babel-preset-react'))
+    ]
   ];
+
+  if (react !== false) {
+    presets.push(require('babel-preset-react'));
+  }
 
   const plugins = [
     require('babel-plugin-lodash'),
