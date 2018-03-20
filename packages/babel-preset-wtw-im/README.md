@@ -4,28 +4,54 @@
 
 # Install
 
-````bash
+```bash
 $ npm install --save-dev babel-preset-wtw-im
-````
+```
 
 # Usage
 
 ## Via `.babelrc` (Recommended)
 
 ### .babelrc
-````json
+```json
 {
   "presets": ["wtw-im"]
 }
-````
+```
 
 ### The React preset is included by default, there is an option to turn it off
 
-````json
+```json
 {
   "presets": [["wtw-im", { react: false }]]
 }
-````
+```
+
+### babel-preset-env is included. To customize pass in your env options
+
+For more information on available options, please refer to the [babel-preset-env documentation](https://babeljs.io/docs/plugins/preset-env/).
+
+#### .babelrc
+```json
+{
+  "presets": [["wtw-im", {
+    "env": {
+      "targets": { "browsers": "IE11" }
+    }
+  }]]
+}
+```
+
+#### Node API
+```js
+require("babel-core").transform("code", {
+  presets: [ ["wtw-im", {
+    env: {
+      targets: { browsers: "IE11" }
+    }
+  }] ]
+});
+```
 
 ### extract-format-message
 
@@ -33,7 +59,7 @@ The [extract-format-message](https://github.com/format-message/format-message/tr
 to `locales/en.json` using the default id generator.
 
 #### .babelrc
-```
+```json
 {
   "presets": [["wtw-im", { 
     "extractFormatMessage": {
@@ -41,6 +67,7 @@ to `locales/en.json` using the default id generator.
       "outFile": "my/locales/path.json"
     }
   }] ]
+}
 ```
 
 #### Node API
@@ -53,6 +80,16 @@ require("babel-core").transform("code", {
     }
   }] ]
 })
+```
+
+The plugin can be disabled by setting `extractFormatMessage` to false
+
+```json
+{
+  "presets": [["wtw-im", {
+    "extractFormatMessage" false
+  }]]
+}
 ```
 
 ### transform-format-message
@@ -84,6 +121,16 @@ require("babel-core").transform("code", {
     }
   }] ]
 })
+```
+
+The plugin can be disabled by setting `transformFormatMessage` to false
+
+```json
+{
+  "presets": [["wtw-im", {
+    "transformFormatMessage" false
+  }]]
+}
 ```
 
 ## Via CLI
