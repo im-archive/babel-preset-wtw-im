@@ -11,10 +11,10 @@ function findPlugin(pluginList, expectedPlugin) {
 
 it('can exclude react preset', () => {
   let { presets } = configPreset();
-  expect(presets[1]).not.toBeNull();
+  expect(presets[1]).toBe(require('babel-preset-react'));
 
   ({ presets } = configPreset(null, { react: false }));
-  expect(presets[1]).toBeNull();
+  expect(presets[1]).toBeUndefined();
 });
 
 describe('babel-plugin-extract-format-message', () => {
