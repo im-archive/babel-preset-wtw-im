@@ -19,11 +19,19 @@ $ npm install --save-dev babel-preset-wtw-im
 }
 ```
 
+The preset includes the following plugins and presets:
+
+* [babel-preset-react](https://babeljs.io/docs/plugins/preset-react/)
+* [babel-preset-env](https://babeljs.io/docs/plugins/preset-env/)
+* [babel-plugin-lodash](https://www.npmjs.com/package/babel-plugin-lodash)
+* [babel-plugin-extract-format-message](https://www.npmjs.com/package/babel-plugin-extract-format-message)
+* [babel-plugin-transform-format-message](https://www.npmjs.com/package/babel-plugin-transform-format-message)
+
 ### The React preset is included by default, there is an option to turn it off
 
 ```json
 {
-  "presets": [["wtw-im", { react: false }]]
+  "presets": [["wtw-im", { "react": false }]]
 }
 ```
 
