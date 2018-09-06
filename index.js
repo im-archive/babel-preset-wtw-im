@@ -5,19 +5,18 @@ module.exports = function(context, options = {}) {
 
   const presets = [
     [
-      require('babel-preset-env'),
+      require('@babel/preset-env'),
       Object.assign({}, env)
     ]
   ];
 
   if (react !== false) {
-    presets.push(require('babel-preset-react'));
+    presets.push(require('@babel/preset-react'));
   }
 
   const plugins = [
     require('babel-plugin-lodash'),
-    require('babel-plugin-transform-class-properties'),
-    require('babel-plugin-transform-object-rest-spread')
+    require('@babel/plugin-proposal-class-properties'),
   ];
 
   if (extractFormatMessage !== false) {

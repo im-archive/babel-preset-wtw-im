@@ -11,7 +11,7 @@ function findPlugin(pluginList, expectedPlugin) {
 
 it('can exclude react preset', () => {
   let { presets } = configPreset();
-  expect(presets[1]).toBe(require('babel-preset-react'));
+  expect(presets[1]).toBe(require('@babel/preset-react'));
 
   ({ presets } = configPreset(null, { react: false }));
   expect(presets[1]).toBeUndefined();
