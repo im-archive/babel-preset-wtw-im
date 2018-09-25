@@ -95,7 +95,7 @@ The plugin can be disabled by setting `extractFormatMessage` to false
 ```json
 {
   "presets": [["wtw-im", {
-    "extractFormatMessage" false
+    "extractFormatMessage": false
   }]]
 }
 ```
@@ -136,7 +136,7 @@ The plugin can be disabled by setting `transformFormatMessage` to false
 ```json
 {
   "presets": [["wtw-im", {
-    "transformFormatMessage" false
+    "transformFormatMessage": false
   }]]
 }
 ```
