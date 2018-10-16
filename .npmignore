@@ -1,4 +1,5 @@
 CHANGELOG.md
 commitlint.config.js
 index.specs.js
+module-exists.spec.js
 release.config.js

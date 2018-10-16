@@ -4,5 +4,9 @@ module.exports = {
   },
   transformFormatMessage: {
     inline: false
+  },
+  styledComponents: {
+    ssr: false,
+    displayName: false
   }
 };

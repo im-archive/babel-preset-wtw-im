@@ -1,7 +1,8 @@
 const defaultSettings = require('./default-settings');
+const exists = require('./module-exists');
 
 module.exports = function(context, options = {}) {
-  const { env, react, extractFormatMessage, transformFormatMessage } = options;
+  const { env, react, extractFormatMessage, transformFormatMessage, styledComponents } = options;
 
   const presets = [
     [
@@ -33,6 +34,13 @@ module.exports = function(context, options = {}) {
     plugins.push([
       require('babel-plugin-transform-format-message'),
       Object.assign({}, defaultSettings.transformFormatMessage, transformFormatMessage)
+    ]);
+  }
+
+  if (exists('styled-components')) {
+    plugins.push([
+      require('babel-plugin-styled-components'),
+      Object.assign({}, defaultSettings.styledComponents, styledComponents)
     ]);
   }
 
