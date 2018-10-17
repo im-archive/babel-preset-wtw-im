@@ -1,4 +1,6 @@
 # babel-preset-wtw-im
+[![Build Status](https://travis-ci.com/WTW-IM/babel-preset-wtw-im.svg?branch=master)](https://travis-ci.com/WTW-IM/babel-preset-wtw-im)
+[![npm version](https://badge.fury.io/js/babel-preset-wtw-im.svg)](https://badge.fury.io/js/babel-preset-wtw-im)
 
 > Babel preset for Willis Towers Watson Individual Marketplace
 
@@ -17,6 +19,12 @@ $ npm install --save-dev babel-preset-wtw-im
 {
   "presets": ["wtw-im"]
 }
+```
+
+## Via CLI
+
+```bash
+$ babel script.js --presets wtw-im
 ```
 
 The preset includes the following plugins and presets:
@@ -141,7 +149,15 @@ The plugin can be disabled by setting `transformFormatMessage` to false
 }
 ```
 
-## Via CLI
-````bash
-$ babel script.js --presets wtw-im
-````
+# Contributing
+
+This package uses `semantic-release`. Changes will be compiled into a changelog and the package  versioned, tagged and published automatically.
+Please ensure your commit messages adhere to the following structure:
+
+```
+<type>: <subject>
+<BLANK LINE>
+<body>
+```
+
+Only the header is mandatory. The supported types are based off of the [ESLint Convention](https://github.com/conventional-changelog/conventional-changelog/tree/35e279d40603b0969c6d622514f5c0984c5bf309/packages/conventional-changelog-eslint).
