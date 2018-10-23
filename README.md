@@ -34,6 +34,7 @@ The preset includes the following plugins and presets:
 * [babel-plugin-lodash](https://www.npmjs.com/package/babel-plugin-lodash)
 * [babel-plugin-extract-format-message](https://www.npmjs.com/package/babel-plugin-extract-format-message)
 * [babel-plugin-transform-format-message](https://www.npmjs.com/package/babel-plugin-transform-format-message)
+* [babel-plugin-styled-components](https://www.npmjs.com/package/babel-plugin-styled-components)
 
 ### The React preset is included by default, there is an option to turn it off
 
@@ -148,6 +149,40 @@ The plugin can be disabled by setting `transformFormatMessage` to false
   }]]
 }
 ```
+
+### babel-plugin-styled-components
+
+The [styled-components plugin](https://www.styled-components.com/docs/tooling#babel-plugin) provides support for better minification and style debugging. The default for this preset
+turns off server side rendering and using components' displayName in the generated class names. You can override this behavior as needed. Refer to the linked documentation for
+more information on the available options.
+
+If your project does not use the `styled-components` package this plugin will not be included with the preset.
+
+#### .babelrc
+
+```json
+{
+  "presets": [ ["wtw-im", {
+    "styledComponents": {
+      "ssr": true,
+      "displayName": true
+    }
+  }] ]
+}
+```
+
+```js
+require("babel-core").transform("code", {
+  presets: [ ["wtw-im", {
+    styledComponents: {
+      ssr: true,
+      displayName: true
+    }
+  }] ]
+})
+```
+
+#### code
 
 # Contributing
 
