@@ -1,3 +1,6 @@
+const mockExists = jest.fn();
+jest.mock('./module-exists', () => mockExists);
+
 const configPreset = require('./index');
 const defaultSettings = require('./default-settings');
 
@@ -50,5 +53,20 @@ describe('babel-plugin-transform-format-message', () => {
     const { plugins } = configPreset();
     const settings = findPlugin(plugins, plugin)[1]
     expect(settings).toMatchObject(defaultSettings.transformFormatMessage);
+  });
+});
+
+describe('babel-plugin-styled-components', () => {
+  const plugin = require('babel-plugin-styled-components');
+
+  it('is excluded if project is not using styled-components', () => {
+    const { plugins } = configPreset();
+    expect(findPlugin(plugins, plugin)).toBeFalsy();
+  });
+
+  it('is inlcuded if styled-components is present', () => {
+    mockExists.mockReturnValueOnce(true);
+    const { plugins } = configPreset();
+    expect(findPlugin(plugins, plugin)[0]).toBe(plugin);
   });
 });
