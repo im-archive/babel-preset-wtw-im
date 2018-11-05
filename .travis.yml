@@ -3,10 +3,16 @@ node_js:
   - lts/*
   - node
 
+stages:
+  - test
+  - name: release
+    if: branch = master && type != pull_request
+
 jobs:
   include:
     - stage: release
       node_js: node
+      script: skip
       deploy:
         provider: script
         skip_cleanup: true
