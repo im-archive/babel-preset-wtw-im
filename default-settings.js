@@ -1,4 +1,7 @@
 module.exports = {
+  env: {
+    modules: false
+  },
   extractFormatMessage: {
     outFile: "locales/en.json"
   },
