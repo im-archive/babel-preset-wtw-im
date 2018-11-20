@@ -7,7 +7,7 @@ module.exports = function(context, options = {}) {
   const presets = [
     [
       require('@babel/preset-env'),
-      Object.assign({}, env)
+      Object.assign({}, defaultSettings.env, env)
     ]
   ];
 
