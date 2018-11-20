@@ -1,3 +1,10 @@
+## [2.3.1](https://github.com/WTW-IM/babel-preset-wtw-im/compare/v2.3.0...v2.3.1) (2018-11-20)
+
+
+### Fix
+
+* consume defaultSettings.env ([b912ca5433baed1b1be27b7a27e8680d072ac204](https://github.com/WTW-IM/babel-preset-wtw-im/commit/b912ca5433baed1b1be27b7a27e8680d072ac204))
+
 # [2.3.0](https://github.com/WTW-IM/babel-preset-wtw-im/compare/v2.2.1...v2.3.0) (2018-11-20)
 
 
