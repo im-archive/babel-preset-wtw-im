@@ -1,4 +1,14 @@
+const env = {
+  modules: false
+};
+
+// This allows jest to function normally
+if (process.env.NODE_ENV === 'test') {
+  env.modules = "auto";
+}
+
 module.exports = {
+  env,
   extractFormatMessage: {
     outFile: "locales/en.json"
   },
