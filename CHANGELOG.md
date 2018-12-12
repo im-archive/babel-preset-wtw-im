@@ -1,3 +1,14 @@
+## [2.3.2](https://github.com/WTW-IM/babel-preset-wtw-im/compare/v2.3.1...v2.3.2) (2018-12-12)
+
+
+### Fix
+
+* ensure downstream usage of corejs runtime ([1ac07253f76595360de7080cedceee1f779b347f](https://github.com/WTW-IM/babel-preset-wtw-im/commit/1ac07253f76595360de7080cedceee1f779b347f))
+
+### Upgrade
+
+* use runtime-corejs2 over runtime ([a9d686bee3bfb4f5de0e4d1b07cc66a3f8ded9e2](https://github.com/WTW-IM/babel-preset-wtw-im/commit/a9d686bee3bfb4f5de0e4d1b07cc66a3f8ded9e2))
+
 ## [2.3.1](https://github.com/WTW-IM/babel-preset-wtw-im/compare/v2.3.0...v2.3.1) (2018-11-20)
 
 
