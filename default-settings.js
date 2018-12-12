@@ -1,5 +1,6 @@
 const env = {
-  modules: false
+  modules: false,
+  targets: { id: '11' }
 };
 
 // This allows jest to function normally
