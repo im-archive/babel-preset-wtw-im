@@ -1,6 +1,7 @@
 const env = {
   modules: false,
-  targets: { id: '11' }
+  targets: { ie: '11' },
+  useBuiltIns: 'usage'
 };
 
 // This allows jest to function normally
