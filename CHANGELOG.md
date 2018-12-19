@@ -1,3 +1,10 @@
+## [2.3.3](https://github.com/WTW-IM/babel-preset-wtw-im/compare/v2.3.2...v2.3.3) (2018-12-19)
+
+
+### Fix
+
+* use useBuiltIns feature ([1b1498e1465aa46bf3bc71cb9080da3c1246592d](https://github.com/WTW-IM/babel-preset-wtw-im/commit/1b1498e1465aa46bf3bc71cb9080da3c1246592d))
+
 ## [2.3.2](https://github.com/WTW-IM/babel-preset-wtw-im/compare/v2.3.1...v2.3.2) (2018-12-12)
 
 
