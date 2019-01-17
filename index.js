@@ -20,7 +20,8 @@ module.exports = function(context, options = {}) {
     require('@babel/plugin-proposal-class-properties'),
     require('@babel/plugin-proposal-object-rest-spread'),
     [require('babel-plugin-transform-react-remove-prop-types'), { mode: 'wrap' }],
-    [require('@babel/plugin-transform-runtime'), { corejs: 2 }]
+    [require('@babel/plugin-transform-runtime'), { corejs: 2 }],
+    require('@babel/plugin-syntax-dynamic-import')
   ];
 
   if (extractFormatMessage !== false) {
