@@ -1,3 +1,10 @@
+# [2.4.0](https://github.com/WTW-IM/babel-preset-wtw-im/compare/v2.3.3...v2.4.0) (2019-01-17)
+
+
+### New
+
+* add @babel/plugin-syntax-dynamic-import ([138e5d689c8e2e13764c178407e749a2d24dbf9c](https://github.com/WTW-IM/babel-preset-wtw-im/commit/138e5d689c8e2e13764c178407e749a2d24dbf9c))
+
 ## [2.3.3](https://github.com/WTW-IM/babel-preset-wtw-im/compare/v2.3.2...v2.3.3) (2018-12-19)
 
 
