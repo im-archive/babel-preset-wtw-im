@@ -1,6 +1,8 @@
 # babel-preset-wtw-im
 [![Build Status](https://travis-ci.com/WTW-IM/babel-preset-wtw-im.svg?branch=master)](https://travis-ci.com/WTW-IM/babel-preset-wtw-im)
 [![npm version](https://badge.fury.io/js/babel-preset-wtw-im.svg)](https://badge.fury.io/js/babel-preset-wtw-im)
+[![dependencies Status](https://david-dm.org/wtw-im/babel-preset-wtw-im/status.svg)](https://david-dm.org/wtw-im/babel-preset-wtw-im)
+[![devDependencies Status](https://david-dm.org/wtw-im/babel-preset-wtw-im/dev-status.svg)](https://david-dm.org/wtw-im/babel-preset-wtw-im?type=dev)
 
 > Babel preset for Willis Towers Watson Individual Marketplace
 
