@@ -1,3 +1,15 @@
+## [2.4.1](https://github.com/WTW-IM/babel-preset-wtw-im/compare/v2.4.0...v2.4.1) (2019-08-01)
+
+
+### Docs
+
+* added dependency and devDepdency badges ([322a18fb8e1417c7cfefe0066ac78d39dc6c62e6](https://github.com/WTW-IM/babel-preset-wtw-im/commit/322a18fb8e1417c7cfefe0066ac78d39dc6c62e6))
+
+### Fix
+
+* update dev deps for vulnerability errors ([d1211c202b12efb64f92a15e6e113db742acc161](https://github.com/WTW-IM/babel-preset-wtw-im/commit/d1211c202b12efb64f92a15e6e113db742acc161))
+* update remaining two outdated dependencies ([d51ca824d698082d51c208233fd264f31c41905e](https://github.com/WTW-IM/babel-preset-wtw-im/commit/d51ca824d698082d51c208233fd264f31c41905e))
+
 # [2.4.0](https://github.com/WTW-IM/babel-preset-wtw-im/compare/v2.3.3...v2.4.0) (2019-01-17)
 
 

@@ -43,5 +43,5 @@
     "jest": "^24.8.0",
     "semantic-release": "^15.13.19"
   },
-  "version": "2.4.0"
+  "version": "2.4.1"
 }
