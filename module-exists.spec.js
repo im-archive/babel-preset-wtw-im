@@ -5,5 +5,5 @@ test('returns true if module exists', () => {
 });
 
 test('returns false if module does not exist', () => {
-  expect(exists('styled-components')).toBe(false);
+  expect(exists('webpack')).toBe(false);
 });
