@@ -1,3 +1,10 @@
+# [2.5.0](https://github.com/WTW-IM/babel-preset-wtw-im/compare/v2.4.1...v2.5.0) (2020-07-14)
+
+
+### Update
+
+* updating to remove core-js@2 ([1628e16be80d0e542128d11fd61a0175cba9509e](https://github.com/WTW-IM/babel-preset-wtw-im/commit/1628e16be80d0e542128d11fd61a0175cba9509e))
+
 ## [2.4.1](https://github.com/WTW-IM/babel-preset-wtw-im/compare/v2.4.0...v2.4.1) (2019-08-01)
 
 
