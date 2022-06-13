@@ -12,7 +12,10 @@ module.exports = function(context, options = {}) {
   ];
 
   if (react !== false) {
-    presets.push(require('@babel/preset-react'));
+    presets.push([
+      require('@babel/preset-react'),
+      Object.assign({}, defaultSettings.react, typeof react === 'boolean' ? {} : react || {})
+    ]);
   }
 
   const plugins = [
