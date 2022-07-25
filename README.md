@@ -1,3 +1,7 @@
+```diff
+- This package has now been deprecated.
+```
+
 # babel-preset-wtw-im
 [![Build Status](https://travis-ci.com/WTW-IM/babel-preset-wtw-im.svg?branch=master)](https://travis-ci.com/WTW-IM/babel-preset-wtw-im)
 [![npm version](https://badge.fury.io/js/babel-preset-wtw-im.svg)](https://badge.fury.io/js/babel-preset-wtw-im)
